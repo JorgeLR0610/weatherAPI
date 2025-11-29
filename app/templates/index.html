@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; text-align: center; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        #resultado { margin-top: 20px; border: 1px solid #ccc; padding: 20px; display: none; }
+    </style>
+</head>
+<body>
+
+    <h1>⛅ Weather search</h1>
+    
+    <div>
+        <input type="text" id="city" placeholder="Ej: Chihuahua, London...">
+        <button onclick="fetchWeather()">Buscar</button>
+    </div>
+
+    <div id="loading" style="display:none;">Cargando... 🐢</div>
+
+    <div id="resultado">
+        <h2 id="city_name"></h2>
+        <p>Temperatura: <strong id="temp"></strong></p>
+        <p>Condición: <span id="desc"></span></p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
